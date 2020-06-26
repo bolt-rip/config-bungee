@@ -44,7 +44,7 @@ groups:
   # - restricted(Boolean) Default: false: Is a permission required?
   lobby:
     strategy: balance
-    can-reconnect: true
+    can-reconnect: false
     restricted: false
 # The default group a user is connected to if he freshly joins or his group was restricted in re-connections.
 # And not forced host is matching
