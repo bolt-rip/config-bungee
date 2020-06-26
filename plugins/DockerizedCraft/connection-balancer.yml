@@ -17,7 +17,7 @@ session-store:
     # Type: Integer
     port: 6379
     # Type: Boolean
-    ssl: true
+    ssl: false
 # Environment variables of the containers
 # Type: Section
 environment-variables:
@@ -44,7 +44,7 @@ groups:
   # - restricted(Boolean) Default: false: Is a permission required?
   lobby:
     strategy: balance
-    can-reconnect: false
+    can-reconnect: true
     restricted: false
 # The default group a user is connected to if he freshly joins or his group was restricted in re-connections.
 # And not forced host is matching
