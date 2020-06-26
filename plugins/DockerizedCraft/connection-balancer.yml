@@ -46,6 +46,10 @@ groups:
     strategy: balance
     can-reconnect: true
     restricted: false
+  ranked:
+    strategy: balance
+    can-reconnect: false
+    restricted: true
 # The default group a user is connected to if he freshly joins or his group was restricted in re-connections.
 # And not forced host is matching
 # Type: String
