@@ -17,7 +17,7 @@ session-store:
     # Type: Integer
     port: 6379
     # Type: Boolean
-    ssl: false
+    ssl: true
 # Environment variables of the containers
 # Type: Section
 environment-variables:
