@@ -21,7 +21,7 @@ listeners:
   motd: '&1Bolt bungeecord server'
   tab_list: GLOBAL_PING
   query_enabled: false
-  proxy_protocol: true
+  proxy_protocol: false
   ping_passthrough: false
   priorities:
   - lobby
