@@ -9,7 +9,7 @@ COPY . .
 RUN apk upgrade --no-cache \
     && apk add --no-cache curl
 
-RUN curl https://repo.repsy.io/mvn/boltrip/public/tc/oc/pgm/core/0.9-bolt-SNAPSHOT/core-0.9-bolt-20200626.103358-1.jar -Lo plugins/nerve.jar
+RUN curl https://repo.repsy.io/mvn/boltrip/public/rip/bolt/nerve/1.0.0-SNAPSHOT/nerve-1.0.0-20200624.224324-1.jar -Lo plugins/nerve.jar
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
