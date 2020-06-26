@@ -11,13 +11,13 @@ session-store:
   # Type: Section
   redis:
     # Type: String
-    host: "redis"
+    host: "redis-master"
     # Type: String
     password: ~
     # Type: Integer
     port: 6379
     # Type: Boolean
-    ssl: true
+    ssl: false
 # Environment variables of the containers
 # Type: Section
 environment-variables:
