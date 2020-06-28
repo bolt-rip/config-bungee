@@ -3,7 +3,7 @@
 enabled: true
 # Extra output
 # Type: Boolean
-debug: false
+debug: true
 # Container events actions to listen on for adding server
 # i.e.: "start", "health-status: healthy"
 # Recommended "start", "bootstrap" and health checks
