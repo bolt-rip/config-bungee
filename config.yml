@@ -40,6 +40,12 @@ connection_throttle: 4000
 stats: 85e8fa6c-c86a-4763-bd31-9425cf247115
 connection_throttle_limit: 3
 groups:
-  md_5:
+  Indicado:
+  - admin
+  unixfox:
+  - admin
+  dentmaged:
+  - admin
+  Picajoluna:
   - admin
 prevent_proxy_connections: false
