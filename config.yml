@@ -30,7 +30,7 @@ listeners:
   max_players: 999
   tab_size: 60
   force_default_server: false
-log_pings: true
+log_pings: false
 remote_ping_timeout: 5000
 disabled_commands:
 - disabledcommandhere
