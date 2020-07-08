@@ -13,6 +13,7 @@ permissions:
   - bungeecord.command.end
   - bungeecord.command.ip
   - bungeecord.command.reload
+  - nerve.staff
 timeout: 30000
 log_commands: false
 online_mode: true
