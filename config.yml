@@ -10,7 +10,6 @@ permissions:
   - bungeecord.command.list
   admin:
   - bungeecord.command.alert
-  - bungeecord.command.end
   - bungeecord.command.ip
   - bungeecord.command.reload
   - nerve.staff
