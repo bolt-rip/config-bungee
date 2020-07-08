@@ -11,7 +11,7 @@ session-store:
   # Type: Section
   redis:
     # Type: String
-    host: "redis-master"
+    host: "dockerizedcraft-redis-master"
     # Type: String
     password: ~
     # Type: Integer
