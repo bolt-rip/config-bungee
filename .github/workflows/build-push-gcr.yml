@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Docker Build
-        uses: unixfox/actions-docker-gcr/build@latest
+        uses: unixfox/actions-docker-gcr/build@master
         with:
           image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
           tag: master
