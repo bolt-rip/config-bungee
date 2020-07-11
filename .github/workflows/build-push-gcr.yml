@@ -39,7 +39,7 @@ jobs:
       - name: Docker Build
         uses: unixfox/actions-docker-gcr/build@master
         with:
-          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-fallbacklobby
           tag: master
           dockerfile: Dockerfile.TyphoonLimbo
 
@@ -47,5 +47,5 @@ jobs:
         uses: benjlevesque/actions-docker-gcr/push@v1.1
         with:
           gcloud_key: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
-          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-fallbacklobby
           tag: master
