@@ -18,7 +18,7 @@ log_commands: false
 online_mode: true
 listeners:
 - query_port: 25565
-  motd: '&6&lBOLT &e&l⚡ &r&7| &eClosed Beta\n&7Join today @ bolt.rip'
+  motd: "&6&lBOLT &e&l⚡ &r&7| &eClosed Beta\n&7Join today @ bolt.rip"
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
