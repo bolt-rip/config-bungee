@@ -7,7 +7,7 @@ on:
       - build
 
 jobs:
-  build:
+  build-bungee:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,26 @@ jobs:
         with:
           image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
           tag: master
+
+      - name: Docker Push
+        uses: benjlevesque/actions-docker-gcr/push@v1.1
+        with:
+          gcloud_key: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
+          tag: master
+  
+  build-typhoon:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Docker Build
+        uses: unixfox/actions-docker-gcr/build@latest
+        with:
+          image: ${{ secrets.GOOGLE_PROJECT_ID }}/bolt-bungee
+          tag: master
+          dockerfile: Dockerfile.TyphoonLimbo
 
       - name: Docker Push
         uses: benjlevesque/actions-docker-gcr/push@v1.1

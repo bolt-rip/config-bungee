@@ -16,6 +16,11 @@ permissions:
 timeout: 30000
 log_commands: false
 online_mode: true
+servers:
+  fallback_lobby:
+    motd: '&1Fallback lobby'
+    address: localhost:25566
+    restricted: false
 listeners:
 - query_port: 25565
   motd: "&6&lBOLT &e&l⚡ &r&7| &eClosed Beta\n&7Join today @ bolt.rip"
@@ -24,7 +29,7 @@ listeners:
   proxy_protocol: false
   ping_passthrough: false
   priorities:
-  - lobby
+  - fallback_lobby
   bind_local_address: true
   host: 0.0.0.0:25565
   max_players: 999

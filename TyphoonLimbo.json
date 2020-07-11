@@ -1,0 +1,27 @@
+{
+    "listen_address": ":25566",
+    "max_players": 9999,
+    "motd": "Bolt limbo server",
+    "restricted": false,
+    "logs": false,
+    "join_message": {
+        "text": "You are in the limbo because you were AFK or there aren't any slots available on the lobby or something wrong happened. Do /hub for accessing the lobby. You can still do /server for switching to a ranked server or a private server.",
+        "color": "white"
+    },
+    "boss_bar": {
+        "text": "Consult the chat for more information.",
+        "color": "dark_red"
+    },
+    "playerlist_header": {
+        "text": "US.BOLT.RIP",
+        "color": "yellow",
+        "bold": true
+    },
+    "enable_compression": false,
+    "compression_threshold": 256,
+    "buffer_config": {
+        "handshake_address": 300,
+        "player_name": 16,
+        "chat_message": 32767
+    }
+}

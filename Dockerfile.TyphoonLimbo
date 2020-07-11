@@ -1,0 +1,33 @@
+#
+# Build stage
+#
+FROM golang:1.14-alpine as build
+
+# build root
+WORKDIR /build
+
+# build & test
+RUN apk add --no-cache git upx ca-certificates
+
+RUN git clone https://github.com/TyphoonMC/TyphoonLimbo.git . && git checkout 3d7601405728e7f48694b0aacef39fa1638888c2
+
+RUN go get github.com/TyphoonMC/TyphoonCore && go get github.com/TyphoonMC/go.uuid
+
+RUN CGO_ENABLED=0 GOOS=linux go build
+
+RUN upx --ultra-brute build
+
+#
+# Final image
+#
+FROM scratch
+
+# copy binary and ca certs
+COPY --from=build /build/build /bin/TyphoonLimbo
+
+# copy default caddyfile
+COPY TyphoonLimbo.json config.json
+
+EXPOSE 25566
+
+ENTRYPOINT ["/bin/TyphoonLimbo"]
