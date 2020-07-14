@@ -14,7 +14,7 @@ RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0
     rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:nerve:1.0.0-SNAPSHOT -Ddest=plugins
-RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=de.craftmania:DockerizedCraft:0.2.2 -Ddest=plugins
+RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dclassifier=shaded -Dartifact=de.craftmania:DockerizedCraft:0.2.2 -Ddest=plugins
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
