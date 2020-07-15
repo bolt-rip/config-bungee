@@ -11,7 +11,7 @@ RUN apk upgrade --no-cache \
 
 RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
     -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
-    rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor && mv bin/mc-monitor
+    rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor && mv mc-monitor bin/mc-monitor
 
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:nerve:1.0.0-SNAPSHOT -Ddest=plugins
 
