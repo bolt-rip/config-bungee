@@ -38,7 +38,7 @@ listeners:
 log_pings: false
 remote_ping_timeout: 5000
 disabled_commands:
-- end
+- disabledcommandhere
 network_compression_threshold: 256
 remote_ping_cache: -1
 connection_throttle: 4000
