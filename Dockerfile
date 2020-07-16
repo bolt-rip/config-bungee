@@ -13,13 +13,6 @@ RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0
     -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
     rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor && mv mc-monitor bin/mc-monitor
 
-RUN curl https://github.com/itzg/mc-monitor/releases/download/0.6.0/mc-monitor_0.6.0_linux_amd64.tar.gz \
-    -Lo mc-monitor.tar.gz && tar xzf mc-monitor.tar.gz && \
-    rm LICENSE* README* mc-monitor.tar.gz && chmod +x mc-monitor && mv mc-monitor bin/mc-monitor
-
-RUN curl https://github.com/mikefarah/yq/releases/download/3.3.2/yq_linux_amd64 \
-    -Lo bin/yq && chmod +x bin/yq
-
 RUN mvn dependency:get -DrepoUrl=https://repo.repsy.io/mvn/boltrip/public -Dartifact=rip.bolt:nerve:1.0.0-SNAPSHOT -Ddest=plugins
 
 FROM adoptopenjdk/openjdk8-openj9:alpine-slim
